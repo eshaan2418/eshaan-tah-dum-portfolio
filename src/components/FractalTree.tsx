@@ -12,65 +12,52 @@ const FractalTree: React.FC = () => {
     if (!ctx) return;
 
     // Set canvas size
-    canvas.width = 800;
-    canvas.height = 600;
+    canvas.width = 400;
+    canvas.height = 400;
 
     let animationFrame: number;
-    let angle = 0;
+    let frameCount = 0;
 
     const drawBranch = (
-      startX: number,
-      startY: number,
       length: number,
-      angle: number,
-      depth: number,
-      maxDepth: number
+      angle: number
     ) => {
-      if (depth > maxDepth) return;
-
-      const endX = startX + Math.cos(angle) * length;
-      const endY = startY + Math.sin(angle) * length;
-
-      // Color gradient based on depth
-      const hue = (depth * 30 + Date.now() * 0.1) % 360;
-      ctx.strokeStyle = `hsl(${hue}, 70%, ${70 - depth * 8}%)`;
-      ctx.lineWidth = Math.max(1, maxDepth - depth);
+      if (length < 4) return;
 
       ctx.beginPath();
-      ctx.moveTo(startX, startY);
-      ctx.lineTo(endX, endY);
+      ctx.moveTo(0, 0);
+      ctx.lineTo(0, -length);
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = Math.max(1, length / 20);
       ctx.stroke();
 
-      if (depth < maxDepth) {
-        const newLength = length * 0.7;
-        const angleOffset = Math.sin(Date.now() * 0.001 + depth) * 0.3;
-        
-        drawBranch(endX, endY, newLength, angle - 0.5 + angleOffset, depth + 1, maxDepth);
-        drawBranch(endX, endY, newLength, angle + 0.5 + angleOffset, depth + 1, maxDepth);
-      }
+      ctx.translate(0, -length);
+
+      ctx.save();
+      ctx.rotate(angle);
+      drawBranch(length * 0.67, angle);
+      ctx.restore();
+
+      ctx.save();
+      ctx.rotate(-angle);
+      drawBranch(length * 0.67, angle);
+      ctx.restore();
     };
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Dark background with subtle gradient
-      const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0,
-        canvas.width / 2, canvas.height / 2, canvas.width / 2
-      );
-      gradient.addColorStop(0, 'rgba(20, 20, 30, 0.1)');
-      gradient.addColorStop(1, 'rgba(10, 10, 20, 0.3)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Draw the main trunk
-      const trunkHeight = 100;
-      const startX = canvas.width / 2;
-      const startY = canvas.height - 50;
-
-      drawBranch(startX, startY, trunkHeight, -Math.PI / 2, 0, 8);
-
-      angle += 0.01;
+      ctx.save();
+      ctx.translate(canvas.width / 2, canvas.height);
+      
+      // Vary the angle using sin for smooth animation
+      const currentAngle = Math.sin(frameCount * 0.01) * (Math.PI / 8) + (Math.PI / 6);
+      
+      drawBranch(100, currentAngle);
+      
+      ctx.restore();
+      
+      frameCount++;
       animationFrame = requestAnimationFrame(animate);
     };
 
@@ -87,8 +74,8 @@ const FractalTree: React.FC = () => {
     <div className="flex justify-center items-center">
       <canvas
         ref={canvasRef}
-        className="max-w-full h-auto border border-gray-800 rounded-lg shadow-2xl"
-        style={{ background: 'linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 100%)' }}
+        className="max-w-full h-auto"
+        style={{ background: 'transparent' }}
       />
     </div>
   );
