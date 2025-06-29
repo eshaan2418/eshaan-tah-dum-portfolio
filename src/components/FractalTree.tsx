@@ -11,9 +11,9 @@ const FractalTree: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size
-    canvas.width = 400;
-    canvas.height = 400;
+    // Set smaller canvas size for top-left positioning
+    canvas.width = 300;
+    canvas.height = 300;
 
     let animationFrame: number;
     let frameCount = 0;
@@ -22,13 +22,13 @@ const FractalTree: React.FC = () => {
       length: number,
       angle: number
     ) => {
-      if (length < 4) return;
+      if (length < 3) return;
 
       ctx.beginPath();
       ctx.moveTo(0, 0);
       ctx.lineTo(0, -length);
-      ctx.strokeStyle = 'white';
-      ctx.lineWidth = Math.max(1, length / 20);
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = Math.max(1, length / 15);
       ctx.stroke();
 
       ctx.translate(0, -length);
@@ -48,12 +48,12 @@ const FractalTree: React.FC = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       ctx.save();
-      ctx.translate(canvas.width / 2, canvas.height);
+      ctx.translate(canvas.width / 2, canvas.height - 20);
       
       // Vary the angle using sin for smooth animation
       const currentAngle = Math.sin(frameCount * 0.01) * (Math.PI / 8) + (Math.PI / 6);
       
-      drawBranch(100, currentAngle);
+      drawBranch(80, currentAngle);
       
       ctx.restore();
       
