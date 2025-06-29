@@ -11,9 +11,16 @@ const FractalTree: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set smaller canvas size for top-left positioning
-    canvas.width = 300;
-    canvas.height = 300;
+    // Responsive canvas sizing
+    const updateCanvasSize = () => {
+      const isMobile = window.innerWidth < 768;
+      const size = isMobile ? 250 : 300;
+      canvas.width = size;
+      canvas.height = size;
+    };
+
+    updateCanvasSize();
+    window.addEventListener('resize', updateCanvasSize);
 
     let animationFrame: number;
     let frameCount = 0;
@@ -53,7 +60,8 @@ const FractalTree: React.FC = () => {
       // Vary the angle using sin for smooth animation
       const currentAngle = Math.sin(frameCount * 0.01) * (Math.PI / 8) + (Math.PI / 6);
       
-      drawBranch(80, currentAngle);
+      const initialLength = canvas.width < 300 ? 65 : 80;
+      drawBranch(initialLength, currentAngle);
       
       ctx.restore();
       
@@ -67,6 +75,7 @@ const FractalTree: React.FC = () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
       }
+      window.removeEventListener('resize', updateCanvasSize);
     };
   }, []);
 

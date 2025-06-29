@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -94,7 +95,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-black text-red-500;
-    font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
   }
 
   html {
@@ -118,6 +121,11 @@ All colors MUST be HSL.
   ::-webkit-scrollbar-thumb:hover {
     background: #dc2626;
   }
+
+  /* Ensure smooth transitions on mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @layer utilities {
@@ -127,5 +135,12 @@ All colors MUST be HSL.
   
   .bg-gradient-radial {
     background: radial-gradient(ellipse at center, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
+  }
+
+  /* Mobile-first responsive utilities */
+  @media (max-width: 640px) {
+    .text-responsive {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+    }
   }
 }
