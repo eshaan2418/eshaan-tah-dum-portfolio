@@ -114,10 +114,8 @@ export default {
 				'scale-in': 'scale-in 0.6s ease-out'
 			},
 			fontFamily: {
-				'sans': ['Roboto', 'system-ui', '-apple-system', 'sans-serif'],
-				'roboto': ['Roboto', 'system-ui', '-apple-system', 'sans-serif'],
-				'roboto-condensed': ['Roboto Condensed', 'system-ui', '-apple-system', 'sans-serif'],
-				'roboto-slab': ['Roboto Slab', 'system-ui', '-apple-system', 'serif']
+				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif']
 			}
 		}
 	},

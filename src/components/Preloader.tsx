@@ -29,17 +29,21 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
 
   return (
     <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
-      <div className="text-center">
-        <h1 className={`font-roboto text-red-500 lowercase transition-all duration-500 ease-out ${
+      <img 
+        src="/lovable-uploads/52334684-075b-46ae-9b83-739685e4681b.png"
+        alt="Eshaan Oozher Kapooswalla"
+        className={`transition-all duration-500 ease-out ${
           phase === 'show' 
-            ? 'opacity-100 scale-100 blur-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl' 
+            ? 'opacity-100 scale-100 blur-0' 
             : phase === 'expand'
-            ? 'opacity-0 scale-150 blur-lg text-2xl sm:text-3xl md:text-4xl lg:text-5xl'
+            ? 'opacity-0 scale-150 blur-lg'
             : 'opacity-0'
-        }`}>
-          eshaan oozher kapooswalla
-        </h1>
-      </div>
+        }`}
+        style={{
+          maxWidth: '80vw',
+          height: 'auto'
+        }}
+      />
     </div>
   );
 };
