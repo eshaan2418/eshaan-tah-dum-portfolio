@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Preloader from '../components/Preloader';
 import Navigation from '../components/Navigation';
@@ -38,7 +37,7 @@ const Index = () => {
       {showContent && (
         <div className="pt-16 md:pt-20 animate-fade-in">
           {/* Hero Section */}
-          <section className="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 py-8 md:py-12 text-center">
+          <section className="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 py-8 md:py-12">
             {/* Main Content Container */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-8">
               {/* Fractal Tree */}
@@ -47,7 +46,7 @@ const Index = () => {
               </div>
 
               {/* Name and Location */}
-              <div className="flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="flex flex-col items-center md:items-start">
                 {/* Location */}
                 <div className="flex items-center gap-2 text-white text-sm font-light mb-4">
                   <MapPin size={16} />
@@ -72,8 +71,7 @@ const Index = () => {
 
             {/* Description */}
             <div className="max-w-3xl space-y-4 text-base md:text-lg text-white font-light leading-relaxed mb-12 text-center">
-              <p>hi, i'm eshaan.</p>
-              <p>i create cool stuff.</p>
+              <p>hi, i'm eshaan. i try and create cool stuff!</p>
               <p>
                 say hi if you're in tech, you're in toronto, you just love my work, or if you're curious about collaborating, 
                 brainstorming new ideas, or simply connecting over coffee.
