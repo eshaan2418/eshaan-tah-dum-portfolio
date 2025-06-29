@@ -18,7 +18,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo/Brand - Left side */}
           <div className="text-red-500 font-medium text-lg font-poppins">
-            ek
+            EK
           </div>
 
           {/* Desktop Navigation - Center */}
@@ -63,7 +63,7 @@ const Navigation: React.FC = () => {
               <Github size={20} />
             </a>
             <a
-              href="mailto:eshaan@example.com"
+              href="mailto:eshaank@my.yorku.ca"
               className="text-red-500 hover:text-red-400 transition-colors duration-300 hover:scale-110 transform transition-transform"
               title="Email"
             >
