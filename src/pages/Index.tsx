@@ -32,7 +32,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black font-salvatore">
+    <div className="min-h-screen bg-black font-inter">
       <Navigation />
       
       {showContent && (
@@ -47,17 +47,28 @@ const Index = () => {
               </div>
 
               {/* Intro Section - Below tree on mobile, Right on desktop */}
-              <div className="flex-1 space-y-4 md:space-y-6 pt-4 md:pt-8 text-center lg:text-left font-salvatore">
+              <div className="flex-1 space-y-4 md:space-y-6 pt-4 md:pt-8 text-center lg:text-left font-inter">
                 {/* Location */}
                 <div className="flex items-center justify-center lg:justify-start gap-2 text-white text-sm font-light">
                   <MapPin size={16} />
                   <span>Toronto, Ontario</span>
                 </div>
 
-                {/* Name */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-red-500 leading-tight">
-                  Eshaan Oozher Kapooswalla
-                </h1>
+                {/* Name with Images */}
+                <div className="flex flex-col items-center lg:items-start space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <img 
+                      src="/lovable-uploads/7c88d979-5fee-4173-b5e0-d5da3ace061a.png" 
+                      alt="Eshaan Oozher" 
+                      className="h-12 md:h-16 lg:h-20"
+                    />
+                    <img 
+                      src="/lovable-uploads/44c64afb-c5c0-4b67-b162-708ab90ecc54.png" 
+                      alt="Kapooswalla" 
+                      className="h-12 md:h-16 lg:h-20"
+                    />
+                  </div>
+                </div>
 
                 {/* Title */}
                 <p className="text-lg md:text-xl text-white font-light">
@@ -84,7 +95,7 @@ const Index = () => {
 
           {/* About Section */}
           <section id="about" className="min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-20">
-            <div className="max-w-4xl text-center font-salvatore">
+            <div className="max-w-4xl text-center font-inter">
               <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">About</h2>
               <div className="text-base md:text-lg text-red-500 space-y-6 md:space-y-8 font-light leading-relaxed">
                 <p>
@@ -102,7 +113,7 @@ const Index = () => {
 
           {/* Experience Section */}
           <section id="experience" className="min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-20">
-            <div className="max-w-4xl text-center font-salvatore">
+            <div className="max-w-4xl text-center font-inter">
               <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">Experience</h2>
               <div className="text-base md:text-lg text-red-500 font-light leading-relaxed">
                 <p>
@@ -116,7 +127,7 @@ const Index = () => {
 
           {/* Projects Section */}
           <section id="projects" className="min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-20">
-            <div className="max-w-4xl text-center font-salvatore">
+            <div className="max-w-4xl text-center font-inter">
               <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">Projects</h2>
               <div className="text-base md:text-lg text-red-500 font-light leading-relaxed">
                 <p>
@@ -128,7 +139,7 @@ const Index = () => {
           </section>
 
           {/* Footer */}
-          <footer className="py-8 md:py-12 text-center text-red-500 font-light text-sm md:text-base font-salvatore">
+          <footer className="py-8 md:py-12 text-center text-red-500 font-light text-sm md:text-base font-inter">
             <p>&copy; 2024 Eshaan Oozher Kapooswalla. Crafted with passion.</p>
           </footer>
         </div>

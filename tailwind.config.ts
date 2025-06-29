@@ -114,8 +114,8 @@ export default {
 				'scale-in': 'scale-in 0.6s ease-out'
 			},
 			fontFamily: {
-				'sans': ['Oswald', 'system-ui', '-apple-system', 'sans-serif'],
-				'salvatore': ['Oswald', 'system-ui', '-apple-system', 'sans-serif']
+				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif']
 			}
 		}
 	},

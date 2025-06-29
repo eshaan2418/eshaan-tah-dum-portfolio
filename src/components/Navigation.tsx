@@ -6,43 +6,30 @@ const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', image: '/lovable-uploads/ed53e28d-8659-4e25-b054-584e9d6b4fd1.png', href: '#home' },
-    { name: 'About', image: '/lovable-uploads/a925cd33-6f39-4039-b7c0-95ce8c0a881b.png', href: '#about' },
-    { name: 'Experience', image: '/lovable-uploads/b2b1f19d-9a45-4046-b028-89d6a66d68fe.png', href: '#experience' },
-    { name: 'Projects', image: '/lovable-uploads/cc403cd7-38cc-4638-875e-dbea4fa1c598.png', href: '#projects' },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
-          {/* Name with images */}
-          <div className="flex items-center space-x-2">
-            <img 
-              src="/lovable-uploads/7c88d979-5fee-4173-b5e0-d5da3ace061a.png" 
-              alt="Eshaan Oozher" 
-              className="h-6 md:h-8"
-            />
-            <img 
-              src="/lovable-uploads/44c64afb-c5c0-4b67-b162-708ab90ecc54.png" 
-              alt="Kapooswalla" 
-              className="h-6 md:h-8"
-            />
+          {/* Logo/Brand - Left side */}
+          <div className="text-red-500 font-medium text-lg">
+            EK
           </div>
 
           {/* Desktop Navigation - Center */}
-          <div className="hidden md:flex space-x-6 lg:space-x-8">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="hover:opacity-75 transition-opacity duration-300"
+                className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium"
               >
-                <img 
-                  src={item.image} 
-                  alt={item.name} 
-                  className="h-5 lg:h-6"
-                />
+                {item.name}
               </a>
             ))}
           </div>
@@ -93,14 +80,10 @@ const Navigation: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="hover:opacity-75 transition-opacity duration-300"
+                  className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <img 
-                    src={item.image} 
-                    alt={item.name} 
-                    className="h-5"
-                  />
+                  {item.name}
                 </a>
               ))}
             </div>
