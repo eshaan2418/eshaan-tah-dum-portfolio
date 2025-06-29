@@ -45,22 +45,22 @@ const Index = () => {
 
             {/* Introduction Text */}
             <div className="max-w-4xl text-center space-y-8 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-light text-white mb-8">
-                hi, <span className="text-red-500 font-medium">eshaan</span> here.
+              <h1 className="text-5xl md:text-6xl font-light text-red-500 mb-8">
+                hi, <span className="text-red-600 font-medium">eshaan</span> here.
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-400 font-light mb-4">
+              <p className="text-xl md:text-2xl text-red-400 font-light mb-4">
                 I create stuff sometimes.
               </p>
 
-              <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto font-light">
+              <p className="text-lg text-red-300 leading-relaxed max-w-3xl mx-auto font-light">
                 I'm a software engineer from Toronto, Canada. I'm fascinated by large-scale, 
                 high-impact products and contributed to major feature launches in industry-leading 
                 services as well as apps that have 100M+ installs.
               </p>
 
               <div className="flex justify-center mt-12">
-                <button className="border border-gray-600 text-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 font-light tracking-wide">
+                <button className="border border-red-600 text-red-500 px-8 py-3 hover:bg-red-600 hover:text-white transition-all duration-300 font-light tracking-wide">
                   Say hi!
                 </button>
               </div>
@@ -70,8 +70,8 @@ const Index = () => {
           {/* About Section */}
           <section id="about" className="min-h-screen flex items-center justify-center px-6 py-20">
             <div className="max-w-4xl text-center">
-              <h2 className="text-4xl font-light text-white mb-12">About</h2>
-              <div className="text-lg text-gray-300 space-y-8 font-light leading-relaxed">
+              <h2 className="text-4xl font-light text-red-500 mb-12">About</h2>
+              <div className="text-lg text-red-300 space-y-8 font-light leading-relaxed">
                 <p>
                   As a passionate software engineer, I thrive on building products that make a difference. 
                   My journey has taken me through various domains, from mobile applications reaching 
@@ -88,8 +88,8 @@ const Index = () => {
           {/* Experience Section */}
           <section id="experience" className="min-h-screen flex items-center justify-center px-6 py-20">
             <div className="max-w-4xl text-center">
-              <h2 className="text-4xl font-light text-white mb-12">Experience</h2>
-              <div className="text-lg text-gray-300 font-light leading-relaxed">
+              <h2 className="text-4xl font-light text-red-500 mb-12">Experience</h2>
+              <div className="text-lg text-red-300 font-light leading-relaxed">
                 <p>
                   I've had the privilege of working on products that reach millions of users worldwide, 
                   contributing to major feature launches and architectural decisions that shape user experiences 
@@ -102,8 +102,8 @@ const Index = () => {
           {/* Projects Section */}
           <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-20">
             <div className="max-w-4xl text-center">
-              <h2 className="text-4xl font-light text-white mb-12">Projects</h2>
-              <div className="text-lg text-gray-300 font-light leading-relaxed">
+              <h2 className="text-4xl font-light text-red-500 mb-12">Projects</h2>
+              <div className="text-lg text-red-300 font-light leading-relaxed">
                 <p>
                   From mobile apps with 100M+ installs to cutting-edge web applications, 
                   I enjoy building products that push the boundaries of what's possible.
@@ -113,7 +113,7 @@ const Index = () => {
           </section>
 
           {/* Footer */}
-          <footer className="py-12 text-center text-gray-500 font-light">
+          <footer className="py-12 text-center text-red-400 font-light">
             <p>&copy; 2024 Eshaan Oozher Kapooswalla. Crafted with passion.</p>
           </footer>
         </div>

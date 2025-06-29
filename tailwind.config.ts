@@ -114,8 +114,8 @@ export default {
 				'scale-in': 'scale-in 0.6s ease-out'
 			},
 			fontFamily: {
-				'netflix': ['Bebas Neue', 'Arial Black', 'sans-serif'],
-				'sans': ['Inter', 'system-ui', 'sans-serif']
+				'space': ['Space Grotesk', 'sans-serif'],
+				'sans': ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif']
 			}
 		}
 	},

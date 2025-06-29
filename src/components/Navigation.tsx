@@ -6,11 +6,11 @@ const Navigation: React.FC = () => {
   const navItems = ['Home', 'About', 'Experience', 'Projects'];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-red-900">
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Left side - Name */}
-          <div className="text-white font-light text-lg tracking-wide">
+          <div className="text-red-500 font-light text-lg tracking-wide">
             Eshaan Oozher Kapooswalla
           </div>
 
@@ -20,7 +20,7 @@ const Navigation: React.FC = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-300 hover:text-white transition-colors duration-300 font-light tracking-wide text-sm uppercase"
+                className="text-red-400 hover:text-red-500 transition-colors duration-300 font-light tracking-wide text-sm uppercase"
               >
                 {item}
               </a>
@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-red-400 hover:text-red-500 transition-colors duration-300"
             >
               <Linkedin size={20} />
             </a>
@@ -41,13 +41,13 @@ const Navigation: React.FC = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-red-400 hover:text-red-500 transition-colors duration-300"
             >
               <Github size={20} />
             </a>
             <a
               href="mailto:eshaan@example.com"
-              className="text-gray-400 hover:text-white transition-colors duration-300"
+              className="text-red-400 hover:text-red-500 transition-colors duration-300"
             >
               <Mail size={20} />
             </a>
