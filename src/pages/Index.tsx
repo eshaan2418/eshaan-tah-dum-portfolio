@@ -32,7 +32,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black font-salvatore">
       <Navigation />
       
       {showContent && (
@@ -47,7 +47,7 @@ const Index = () => {
               </div>
 
               {/* Intro Section - Below tree on mobile, Right on desktop */}
-              <div className="flex-1 space-y-4 md:space-y-6 pt-4 md:pt-8 text-center lg:text-left">
+              <div className="flex-1 space-y-4 md:space-y-6 pt-4 md:pt-8 text-center lg:text-left font-salvatore">
                 {/* Location */}
                 <div className="flex items-center justify-center lg:justify-start gap-2 text-white text-sm font-light">
                   <MapPin size={16} />
@@ -84,7 +84,7 @@ const Index = () => {
 
           {/* About Section */}
           <section id="about" className="min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-20">
-            <div className="max-w-4xl text-center">
+            <div className="max-w-4xl text-center font-salvatore">
               <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">About</h2>
               <div className="text-base md:text-lg text-red-500 space-y-6 md:space-y-8 font-light leading-relaxed">
                 <p>
@@ -102,7 +102,7 @@ const Index = () => {
 
           {/* Experience Section */}
           <section id="experience" className="min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-20">
-            <div className="max-w-4xl text-center">
+            <div className="max-w-4xl text-center font-salvatore">
               <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">Experience</h2>
               <div className="text-base md:text-lg text-red-500 font-light leading-relaxed">
                 <p>
@@ -116,7 +116,7 @@ const Index = () => {
 
           {/* Projects Section */}
           <section id="projects" className="min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-20">
-            <div className="max-w-4xl text-center">
+            <div className="max-w-4xl text-center font-salvatore">
               <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">Projects</h2>
               <div className="text-base md:text-lg text-red-500 font-light leading-relaxed">
                 <p>
@@ -128,7 +128,7 @@ const Index = () => {
           </section>
 
           {/* Footer */}
-          <footer className="py-8 md:py-12 text-center text-red-500 font-light text-sm md:text-base">
+          <footer className="py-8 md:py-12 text-center text-red-500 font-light text-sm md:text-base font-salvatore">
             <p>&copy; 2024 Eshaan Oozher Kapooswalla. Crafted with passion.</p>
           </footer>
         </div>
