@@ -17,6 +17,13 @@ const Navigation: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleMobileNavClick = (itemName: string) => {
+    if (itemName === 'home') {
+      scrollToTop();
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
@@ -86,9 +93,8 @@ const Navigation: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  onClick={item.name === 'home' ? scrollToTop : undefined}
+                  onClick={() => handleMobileNavClick(item.name)}
                   className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium font-poppins"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
