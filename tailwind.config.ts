@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -114,8 +113,8 @@ export default {
 				'scale-in': 'scale-in 0.6s ease-out'
 			},
 			fontFamily: {
-				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-				'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+				'sans': ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+				'poppins': ['Poppins', 'system-ui', '-apple-system', 'sans-serif']
 			}
 		}
 	},

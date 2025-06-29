@@ -6,10 +6,10 @@ const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'home', href: '#home' },
+    { name: 'about', href: '#about' },
+    { name: 'experience', href: '#experience' },
+    { name: 'projects', href: '#projects' },
   ];
 
   return (
@@ -17,8 +17,8 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Brand - Left side */}
-          <div className="text-red-500 font-medium text-lg">
-            EK
+          <div className="text-red-500 font-medium text-lg font-poppins">
+            ek
           </div>
 
           {/* Desktop Navigation - Center */}
@@ -27,7 +27,7 @@ const Navigation: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium"
+                className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium font-poppins"
               >
                 {item.name}
               </a>
@@ -80,7 +80,7 @@ const Navigation: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium"
+                  className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium font-poppins"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
