@@ -28,18 +28,18 @@ const Navigation: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-red-900/30">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
-          {/* Mobile: Hamburger Menu Button - Left side */}
+          {/* Mobile: Logo/Brand - Left side on mobile, switched position */}
+          <div className="text-red-500 font-medium text-lg font-poppins order-1 md:order-1">
+            EK
+          </div>
+
+          {/* Mobile: Hamburger Menu Button - Right side on mobile */}
           <button
-            className="md:hidden text-red-500 hover:text-red-400 transition-colors order-1"
+            className="md:hidden text-red-500 hover:text-red-400 transition-colors order-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-
-          {/* Mobile: Logo/Brand - Right side on mobile, Left side on desktop */}
-          <div className="text-red-500 font-medium text-lg font-poppins order-2 md:order-1">
-            EK
-          </div>
 
           {/* Desktop Navigation - Center */}
           <div className="hidden md:flex space-x-8 order-2">
@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 onClick={item.name === 'home' ? scrollToTop : undefined}
-                className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium font-poppins"
+                className="text-red-500 hover:text-white transition-colors duration-300 font-medium font-poppins"
               >
                 {item.name}
               </a>
@@ -94,7 +94,7 @@ const Navigation: React.FC = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => handleMobileNavClick(item.name)}
-                  className="text-red-500 hover:text-red-400 transition-colors duration-300 font-medium font-poppins"
+                  className="text-red-500 hover:text-white transition-colors duration-300 font-medium font-poppins"
                 >
                   {item.name}
                 </a>
