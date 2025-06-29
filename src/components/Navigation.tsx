@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -7,10 +6,10 @@ const Navigation: React.FC = () => {
 
   const navItems = [
     { name: 'home', href: '#home' },
-    { name: 'about', href: '#about' },
     { name: 'experience', href: '#experience' },
     { name: 'projects', href: '#projects' },
     { name: 'education', href: '#education' },
+    { name: 'about / fun stuff', href: '#about' },
   ];
 
   return (
