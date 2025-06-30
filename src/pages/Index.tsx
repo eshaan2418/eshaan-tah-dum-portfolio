@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
@@ -206,9 +205,6 @@ const Index = () => {
                 <h2 className="text-4xl md:text-5xl font-light text-red-500 mb-4">
                   Professional Experience
                 </h2>
-                <p className="text-lg text-white/80 max-w-2xl mx-auto">
-                  A journey through innovative technology roles, from healthcare solutions to biotech research
-                </p>
               </div>
 
               {/* Timeline */}
