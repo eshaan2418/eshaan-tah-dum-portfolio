@@ -15,65 +15,65 @@ interface ExperienceEntry {
 const experienceData: ExperienceEntry[] = [
   {
     id: '1',
-    company: 'Stealth Biotech Startup',
-    location: 'Remote',
-    role: 'Machine Learning Software Engineering Intern',
-    period: 'May 2025 – Present',
+    company: 'stealth biotech startup',
+    location: 'remote',
+    role: 'machine learning software engineering intern',
+    period: 'may 2025 – present',
     description: [
-      'Led PyTorch-based ML model development for IBM-funded drug discovery, improving MOA classification accuracy by 15%, reducing analysis time by 25%, saving $5K+.',
-      'Applied weakly/self-supervised learning to cut labeling costs by 40% and reduce data footprint by 60%.',
-      'Built transfer learning pipelines using Docker, improving benchmark performance by 12%, reducing training time by 45%, saving $3K.',
-      'Integrated unsupervised learning techniques with senior researchers, boosting candidate selection by 30%.'
+      'led pytorch-based ml model development for ibm-funded drug discovery, improving moa classification accuracy by 15%, reducing analysis time by 25%, saving $5k+.',
+      'applied weakly/self-supervised learning to cut labeling costs by 40% and reduce data footprint by 60%.',
+      'built transfer learning pipelines using docker, improving benchmark performance by 12%, reducing training time by 45%, saving $3k.',
+      'integrated unsupervised learning techniques with senior researchers, boosting candidate selection by 30%.'
     ],
     isActive: true
   },
   {
     id: '2',
-    company: 'YU Blueprint',
-    location: 'Toronto',
-    role: 'Software Developer Intern',
-    period: 'May 2025 – Present',
+    company: 'yu blueprint',
+    location: 'toronto',
+    role: 'software developer intern',
+    period: 'may 2025 – present',
     description: [
-      'Developed open source projects with non-profits.',
-      'Improved accessibility and UX on web apps.',
-      'Contributed to feature development, bug fixes, and agile code reviews.'
+      'developed open source projects with non-profits.',
+      'improved accessibility and ux on web apps.',
+      'contributed to feature development, bug fixes, and agile code reviews.'
     ],
     isActive: true
   },
   {
     id: '3',
-    company: 'ITREB Canada',
-    location: 'Toronto, Hybrid',
-    role: 'Full Stack Developer Intern',
-    period: 'May 2024 – December 2024',
+    company: 'itreb canada',
+    location: 'toronto, hybrid',
+    role: 'full stack developer intern',
+    period: 'may 2024 – december 2024',
     description: [
-      'Developed Spring Boot microservices and REST APIs with TDD.',
-      'Implemented API rate limiting and security.',
-      'Revamped frontend/backend of iicanada.org, reducing data retrieval time by 20% for 30,000+ users.',
-      'Improved UX by reducing user clicks by 16% and integrating React Query for efficient data fetching.'
+      'developed spring boot microservices and rest apis with tdd.',
+      'implemented api rate limiting and security.',
+      'revamped frontend/backend of iicanada.org, reducing data retrieval time by 20% for 30,000+ users.',
+      'improved ux by reducing user clicks by 16% and integrating react query for efficient data fetching.'
     ]
   },
   {
     id: '4',
-    company: 'Prince Aly Khan Hospital',
-    location: 'Remote',
-    role: 'Software Engineer Intern',
-    period: 'January – August 2024',
+    company: 'prince aly khan hospital',
+    location: 'remote',
+    role: 'software engineer intern',
+    period: 'january – august 2024',
     description: [
-      'Built secure, scalable healthcare workflow solutions.',
-      'Developed responsive, user-friendly React interfaces.',
-      'Ensured data privacy and compliance across remote teams.'
+      'built secure, scalable healthcare workflow solutions.',
+      'developed responsive, user-friendly react interfaces.',
+      'ensured data privacy and compliance across remote teams.'
     ]
   },
   {
     id: '5',
-    company: 'AIESEC',
-    location: 'Remote',
-    role: 'VP of Tech',
+    company: 'aiesec',
+    location: 'remote',
+    role: 'vp of tech',
     period: '2023 – 2024',
     description: [
-      'Ran cross-cultural exchange and leadership development initiatives.',
-      'Helped with web development and organized events.'
+      'ran cross-cultural exchange and leadership development initiatives.',
+      'helped with web development and organized events.'
     ]
   }
 ];
@@ -107,7 +107,7 @@ const ExperienceSection = () => {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-red-500 mb-4">
-            Professional Experience
+            professional experience
           </h2>
         </div>
 
@@ -147,7 +147,7 @@ const ExperienceSection = () => {
                         <span className="text-sm font-medium">{entry.period}</span>
                         {entry.isActive && (
                           <span className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">
-                            Current
+                            current
                           </span>
                         )}
                       </div>
