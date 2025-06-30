@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
@@ -162,6 +161,15 @@ const Index = () => {
   const [showPreloader, setShowPreloader] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const yorkuImages = [
+    '/lovable-uploads/0fe83b93-4e80-48c0-80da-7ec9841da45b.png',
+    '/lovable-uploads/bfecc39f-d006-49fd-92db-900bcc300ed2.png',
+    '/lovable-uploads/dcceb3f1-c826-4fd5-8c2c-a05b90117756.png',
+    '/lovable-uploads/e7675e74-02e0-43cb-9244-66b4112e60d4.png',
+    '/lovable-uploads/169ced2e-3e01-4351-9c17-d1421be4f91f.png'
+  ];
 
   const handlePreloaderComplete = () => {
     setShowPreloader(false);
@@ -202,6 +210,17 @@ const Index = () => {
 
     return () => observer.disconnect();
   }, [showContent]);
+
+  // Auto-rotate images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % yorkuImages.length
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [yorkuImages.length]);
 
   if (showPreloader) {
     return <Preloader onComplete={handlePreloaderComplete} />;
@@ -428,15 +447,91 @@ const Index = () => {
           </section>
 
           {/* Education Section */}
-          <section id="education" className="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 py-16 md:py-20 text-center">
-            <div className="max-w-4xl font-inter">
-              <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">education</h2>
-              <div className="text-base md:text-lg text-red-500 font-light leading-relaxed">
-                <p>
-                  currently pursuing software engineering at lassonde school of engineering, york university, 
-                  where i'm deepening my understanding of computer science fundamentals and exploring 
-                  advanced topics in software architecture and system design.
-                </p>
+          <section id="education" className="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 py-16 md:py-20">
+            <div className="max-w-4xl w-full font-inter">
+              <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12 text-center">education</h2>
+              
+              {/* York University Photo Gallery */}
+              <div className="mb-12 flex justify-center">
+                <div className="relative w-full max-w-2xl h-64 md:h-80 rounded-lg overflow-hidden shadow-lg">
+                  {yorkuImages.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`York University Campus ${index + 1}`}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                        index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
+                  ))}
+                  {/* Image indicator dots */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    {yorkuImages.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                          index === currentImageIndex ? 'bg-red-500' : 'bg-white/50'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Education Details */}
+              <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10">
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-2">
+                    Lassonde School of Engineering, York University
+                  </h3>
+                  <p className="text-lg text-red-400 mb-3">
+                    Bachelor of Engineering in Software Engineering (Co-op)
+                  </p>
+                  <div className="flex flex-col md:flex-row md:items-center md:gap-4 mb-4 text-red-400">
+                    <div className="flex items-center gap-2 justify-center md:justify-start">
+                      <MapPin size={16} />
+                      <span>Toronto, Ontario, Canada</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center md:justify-start">
+                      <Calendar size={16} />
+                      <span>Expected Graduation: April 2027</span>
+                    </div>
+                  </div>
+                  
+                  {/* Highlights */}
+                  <div className="mb-4">
+                    <h4 className="text-red-500 font-medium mb-2">Highlights:</h4>
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                      <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full">
+                        Tentanda Via Scholar
+                      </span>
+                      <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full">
+                        Lassonde Co-op Program
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Relevant Coursework */}
+                  <div>
+                    <h4 className="text-red-500 font-medium mb-2">Relevant Coursework:</h4>
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
+                      {[
+                        'Computer Science',
+                        'Data Structures and Algorithms',
+                        'Databases',
+                        'Computer Networks',
+                        'Computer Organization',
+                        'Operating Systems',
+                        'Object-Oriented Programming (OOPs)',
+                        'Software System Design'
+                      ].map((course, index) => (
+                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                          {course}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             
