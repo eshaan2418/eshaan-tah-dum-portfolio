@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
@@ -90,69 +91,69 @@ const experienceData: ExperienceEntry[] = [
 
 const projectsData: Project[] = [
   {
-    name: "FitMind-AI",
+    name: "fitMind-ai",
     techStack: "JavaScript/Node.js (Microservices), Express, MongoDB, Docker/Kubernetes",
-    description: "AI-powered fitness & wellness platform built on microservices. Tracks user activities, offers personalized recommendations, and scales via containerized services.",
+    description: "ai-powered fitness & wellness platform built on microservices. tracks user activities, offers personalized recommendations, and scales via containerized services.",
     githubUrl: "https://github.com/eshaan-kapooswalla/FitMind-AI"
   },
   {
-    name: "Jobber",
+    name: "jobber",
     techStack: "Java (Spring Boot), React, PostgreSQL, Docker",
-    description: "Distributed job portal platform with microservices. Spring Boot handles backend APIs, React frontend provides a responsive UI, database stores job and user data.",
+    description: "distributed job portal platform with microservices. spring boot handles backend apis, react frontend provides a responsive ui, database stores job and user data.",
     githubUrl: "https://github.com/eshaan-kapooswalla/Jobber"
   },
   {
-    name: "MorphUNet",
+    name: "morphUNet",
     techStack: "Python, PyTorch, NumPy",
-    description: "Implements various U-Net architectures in PyTorch for image segmentation tasks, focusing on datasets like Carvana's masking challenge.",
+    description: "implements various u-net architectures in pytorch for image segmentation tasks, focusing on datasets like carvana's masking challenge.",
     githubUrl: "https://github.com/eshaan-kapooswalla/MorphUNet"
   },
   {
-    name: "ShopSmart-AI",
+    name: "shopSmart-ai",
     techStack: "Python, Jupyter Notebook, scikit-learn, Pandas",
-    description: "E-commerce recommender system using machine learning to suggest products based on user behavior and purchase history.",
+    description: "e-commerce recommender system using machine learning to suggest products based on user behavior and purchase history.",
     githubUrl: "https://github.com/eshaan-kapooswalla/ShopSmart-AI"
   },
   {
-    name: "StockPredictor",
+    name: "stockPredictor",
     techStack: "Python, scikit-learn/Keras, Pandas",
-    description: "Applies ML models to predict stock prices, using historical data and features engineered in Python notebooks.",
+    description: "applies ml models to predict stock prices, using historical data and features engineered in python notebooks.",
     githubUrl: "https://github.com/eshaan-kapooswalla/StockPredictor"
   },
   {
-    name: "Gideon-AI-Desktop-Assistant",
+    name: "gideon-ai-desktop-assistant",
     techStack: "Python, SpeechRecognition, pyttsx3, APIs",
-    description: "Desktop-based AI assistant (inspired by The Flash) with voice I/O, can perform tasks, answer queries, and integrate with various APIs.",
+    description: "desktop-based ai assistant (inspired by the flash) with voice i/o, can perform tasks, answer queries, and integrate with various apis.",
     githubUrl: "https://github.com/eshaan-kapooswalla/Gideon-AI-Desktop-Assistant"
   },
   {
-    name: "TetrisPlay",
+    name: "tetrisPlay",
     techStack: "C++, SDL (or console-based)",
-    description: "Classic Tetris game implemented in C++. Hands-on experience with game mechanics, input handling, and state management.",
+    description: "classic tetris game implemented in c++. hands-on experience with game mechanics, input handling, and state management.",
     githubUrl: "https://github.com/eshaan-kapooswalla/TetrisPlay"
   },
   {
-    name: "MandelbrotExplorer",
+    name: "mandelbrotExplorer",
     techStack: "MATLAB",
-    description: "MATLAB script to generate and visualize the Mandelbrot set, ideal for visual exploration of complex fractal patterns.",
+    description: "matlab script to generate and visualize the mandelbrot set, ideal for visual exploration of complex fractal patterns.",
     githubUrl: "https://github.com/eshaan-kapooswalla/MandelbrotExplorer"
   },
   {
-    name: "Book-Store",
+    name: "book-store",
     techStack: "JavaScript, Node.js, Express, MongoDB, React (MERN)",
-    description: "Full-stack MERN application for managing a book inventory with CRUD operations and a clean React UI.",
+    description: "full-stack mern application for managing a book inventory with crud operations and a clean react ui.",
     githubUrl: "https://github.com/eshaan-kapooswalla/Book-Store"
   },
   {
-    name: "Cabieeee",
+    name: "cabieeee",
     techStack: "JavaScript, React Native (or Expo), Firebase/Socket.io, Node.js",
-    description: "Real-time cab-ordering mobile app (an Uber clone). Implements booking flows, live driver updates, and chat features.",
+    description: "real-time cab-ordering mobile app (an uber clone). implements booking flows, live driver updates, and chat features.",
     githubUrl: "https://github.com/eshaan-kapooswalla/Cabieeee"
   },
   {
-    name: "PlantWateringSystem",
+    name: "plantWateringSystem",
     techStack: "Java (Arduino/Embedded), Sensors, MQTT (optional), Server backend",
-    description: "Automated system that monitors soil moisture and waters plants accordingly. Involves hardware sensors, timer logic, and server integration.",
+    description: "automated system that monitors soil moisture and waters plants accordingly. involves hardware sensors, timer logic, and server integration.",
     githubUrl: "https://github.com/eshaan-kapooswalla/PlantWateringSystem"
   }
 ];
@@ -405,7 +406,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="group block"
                   >
-                    <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 h-full transition-all duration-300 hover:border-red-500 hover:bg-red-500 hover:shadow-lg hover:shadow-red-500/20 cursor-pointer">
+                    <div className="bg-black/60 backdrop-blur-sm border border-red-500 rounded-lg p-6 h-full transition-all duration-300 hover:bg-red-500 hover:shadow-lg hover:shadow-red-500/20 cursor-pointer">
                       {/* Project Name */}
                       <div className="flex items-center justify-between mb-3">
                         <h3 className="text-xl font-semibold text-red-500 group-hover:text-white transition-colors duration-300">
@@ -419,8 +420,8 @@ const Index = () => {
 
                       {/* Tech Stack */}
                       <div className="mb-3">
-                        <p className="text-sm font-medium text-red-400 group-hover:text-white/90 transition-colors duration-300 mb-1">
-                          Tech Stack:
+                        <p className="text-sm font-medium text-white group-hover:text-white transition-colors duration-300 mb-1">
+                          tech stack:
                         </p>
                         <p className="text-sm text-red-500 group-hover:text-white transition-colors duration-300">
                           {project.techStack}
