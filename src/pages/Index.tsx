@@ -210,11 +210,11 @@ const Index = () => {
               {/* Timeline */}
               <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-500 via-red-400 to-red-600 transform md:-translate-x-0.5"></div>
+                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-500 via-red-400 to-red-600"></div>
 
                 {/* Experience Entries */}
                 <div className="space-y-12">
-                  {experienceData.map((entry, index) => (
+                  {experienceData.map((entry) => (
                     <div
                       key={entry.id}
                       id={entry.id}
@@ -225,7 +225,7 @@ const Index = () => {
                       }`}
                     >
                       {/* Timeline Node */}
-                      <div className={`absolute left-2 md:left-1/2 w-4 h-4 rounded-full transform md:-translate-x-2 ${
+                      <div className={`absolute left-2 w-4 h-4 rounded-full transform -translate-x-2 ${
                         entry.isActive 
                           ? 'bg-red-500 shadow-lg shadow-red-500/50 animate-pulse' 
                           : 'bg-red-600'
@@ -234,9 +234,7 @@ const Index = () => {
                       </div>
 
                       {/* Content Card */}
-                      <div className={`ml-12 md:ml-0 ${
-                        index % 2 === 0 ? 'md:pr-8 md:text-right md:mr-1/2' : 'md:pl-8 md:ml-1/2'
-                      }`}>
+                      <div className="ml-12">
                         <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10">
                           {/* Header */}
                           <div className="mb-4">
