@@ -1,9 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
 import Navigation from '../components/Navigation';
 import FractalTree from '../components/FractalTree';
-import { MapPin, ChevronDown, ArrowRight, Calendar } from 'lucide-react';
+import { MapPin, ChevronDown, ArrowRight, Calendar, ExternalLink } from 'lucide-react';
 
 interface ExperienceEntry {
   id: string;
@@ -13,6 +14,13 @@ interface ExperienceEntry {
   period: string;
   description: string[];
   isActive?: boolean;
+}
+
+interface Project {
+  name: string;
+  techStack: string;
+  description: string;
+  githubUrl: string;
 }
 
 const experienceData: ExperienceEntry[] = [
@@ -78,6 +86,75 @@ const experienceData: ExperienceEntry[] = [
       'Ran cross-cultural exchange and leadership development initiatives.',
       'Helped with web development and organized events.'
     ]
+  }
+];
+
+const projectsData: Project[] = [
+  {
+    name: "FitMind-AI",
+    techStack: "JavaScript/Node.js (Microservices), Express, MongoDB, Docker/Kubernetes",
+    description: "AI-powered fitness & wellness platform built on microservices. Tracks user activities, offers personalized recommendations, and scales via containerized services.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/FitMind-AI"
+  },
+  {
+    name: "Jobber",
+    techStack: "Java (Spring Boot), React, PostgreSQL, Docker",
+    description: "Distributed job portal platform with microservices. Spring Boot handles backend APIs, React frontend provides a responsive UI, database stores job and user data.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/Jobber"
+  },
+  {
+    name: "MorphUNet",
+    techStack: "Python, PyTorch, NumPy",
+    description: "Implements various U-Net architectures in PyTorch for image segmentation tasks, focusing on datasets like Carvana's masking challenge.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/MorphUNet"
+  },
+  {
+    name: "ShopSmart-AI",
+    techStack: "Python, Jupyter Notebook, scikit-learn, Pandas",
+    description: "E-commerce recommender system using machine learning to suggest products based on user behavior and purchase history.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/ShopSmart-AI"
+  },
+  {
+    name: "StockPredictor",
+    techStack: "Python, scikit-learn/Keras, Pandas",
+    description: "Applies ML models to predict stock prices, using historical data and features engineered in Python notebooks.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/StockPredictor"
+  },
+  {
+    name: "Gideon-AI-Desktop-Assistant",
+    techStack: "Python, SpeechRecognition, pyttsx3, APIs",
+    description: "Desktop-based AI assistant (inspired by The Flash) with voice I/O, can perform tasks, answer queries, and integrate with various APIs.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/Gideon-AI-Desktop-Assistant"
+  },
+  {
+    name: "TetrisPlay",
+    techStack: "C++, SDL (or console-based)",
+    description: "Classic Tetris game implemented in C++. Hands-on experience with game mechanics, input handling, and state management.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/TetrisPlay"
+  },
+  {
+    name: "MandelbrotExplorer",
+    techStack: "MATLAB",
+    description: "MATLAB script to generate and visualize the Mandelbrot set, ideal for visual exploration of complex fractal patterns.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/MandelbrotExplorer"
+  },
+  {
+    name: "Book-Store",
+    techStack: "JavaScript, Node.js, Express, MongoDB, React (MERN)",
+    description: "Full-stack MERN application for managing a book inventory with CRUD operations and a clean React UI.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/Book-Store"
+  },
+  {
+    name: "Cabieeee",
+    techStack: "JavaScript, React Native (or Expo), Firebase/Socket.io, Node.js",
+    description: "Real-time cab-ordering mobile app (an Uber clone). Implements booking flows, live driver updates, and chat features.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/Cabieeee"
+  },
+  {
+    name: "PlantWateringSystem",
+    techStack: "Java (Arduino/Embedded), Sensors, MQTT (optional), Server backend",
+    description: "Automated system that monitors soil moisture and waters plants accordingly. Involves hardware sensors, timer logic, and server integration.",
+    githubUrl: "https://github.com/eshaan-kapooswalla/PlantWateringSystem"
   }
 ];
 
@@ -290,19 +367,59 @@ const Index = () => {
           </section>
 
           {/* Projects Section */}
-          <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 py-16 md:py-20 text-center">
-            <div className="max-w-4xl font-inter">
-              <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">projects</h2>
-              <div className="text-base md:text-lg text-red-500 font-light leading-relaxed">
-                <p>
-                  from mobile apps with 100m+ installs to cutting-edge web applications, 
-                  i enjoy building products that push the boundaries of what's possible.
-                </p>
+          <section id="projects" className="min-h-screen px-4 md:px-6 py-16 md:py-20">
+            <div className="max-w-6xl mx-auto">
+              {/* Section Title */}
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-light text-red-500 mb-4">
+                  projects
+                </h2>
+              </div>
+
+              {/* Projects Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {projectsData.map((project, index) => (
+                  <a
+                    key={index}
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block"
+                  >
+                    <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 h-full transition-all duration-300 hover:border-red-500 hover:bg-red-500 hover:shadow-lg hover:shadow-red-500/20 cursor-pointer">
+                      {/* Project Name */}
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-xl font-semibold text-red-500 group-hover:text-white transition-colors duration-300">
+                          {project.name}
+                        </h3>
+                        <ExternalLink 
+                          size={18} 
+                          className="text-red-500 group-hover:text-white transition-colors duration-300" 
+                        />
+                      </div>
+
+                      {/* Tech Stack */}
+                      <div className="mb-3">
+                        <p className="text-sm font-medium text-red-400 group-hover:text-white/90 transition-colors duration-300 mb-1">
+                          Tech Stack:
+                        </p>
+                        <p className="text-sm text-red-500 group-hover:text-white transition-colors duration-300">
+                          {project.techStack}
+                        </p>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-sm text-red-500 group-hover:text-white transition-colors duration-300 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
             
             {/* Down Arrow */}
-            <div className="flex justify-center mt-12">
+            <div className="flex justify-center mt-16">
               <ChevronDown 
                 size={32} 
                 className="text-red-500 animate-bounce cursor-pointer hover:text-red-400 transition-colors" 
