@@ -35,7 +35,7 @@ const AboutSection = () => {
                 I'm currently catching up with <span className="text-red-500">Modern Family</span>.
               </li>
               <li>
-                Unpopular opinion: <span className="text-red-500">sunrises</span> > sunsets (I said it).
+                Unpopular opinion: <span className="text-red-500">sunrises</span> {'>'}  sunsets (I said it).
               </li>
               <li>
                 I have an unhealthy obsession with <span className="text-red-500">math</span> (especially calculus).
