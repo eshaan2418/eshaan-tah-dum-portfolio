@@ -6,16 +6,42 @@ const AboutSection = () => {
     <section id="about" className="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 py-16 md:py-20 text-center">
       <div className="max-w-4xl font-inter">
         <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">about / fun stuff</h2>
-        <div className="text-base md:text-lg text-red-500 space-y-6 md:space-y-8 font-light leading-relaxed">
-          <p>
-            as a passionate software engineer, i thrive on building products that make a difference. 
-            my journey has taken me through various domains, from mobile applications reaching 
-            millions of users to enterprise-scale backend systems.
-          </p>
-          <p>
-            based in toronto, i'm always exploring the intersection of technology and human experience, 
-            crafting solutions that are not just functional, but delightful to use.
-          </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-left">
+          {/* Technical Section */}
+          <div>
+            <h3 className="text-xl md:text-2xl font-light text-red-500 mb-6">Technical</h3>
+            <ul className="space-y-4 text-white font-light leading-relaxed">
+              <li>
+                I'm working on my own <span className="text-red-500">startup</span> – something cool coming out this <span className="text-red-500">May</span> ;)
+              </li>
+              <li>
+                I'm individually authoring an <span className="text-red-500">ML paper</span> on helping people with glasses see their phones/laptops without glasses.
+              </li>
+              <li>
+                I'm always down for <span className="text-red-500">hackathons</span>.
+              </li>
+            </ul>
+          </div>
+
+          {/* Fun Section */}
+          <div>
+            <h3 className="text-xl md:text-2xl font-light text-red-500 mb-6">Fun</h3>
+            <ul className="space-y-4 text-white font-light leading-relaxed">
+              <li>
+                I'm obsessed with the <span className="text-red-500">moon</span>.
+              </li>
+              <li>
+                I'm currently catching up with <span className="text-red-500">Modern Family</span>.
+              </li>
+              <li>
+                Unpopular opinion: <span className="text-red-500">sunrises</span> > sunsets (I said it).
+              </li>
+              <li>
+                I have an unhealthy obsession with <span className="text-red-500">math</span> (especially calculus).
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
