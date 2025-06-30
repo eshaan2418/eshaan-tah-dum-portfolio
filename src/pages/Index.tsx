@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
 import Navigation from '../components/Navigation';
 import FractalTree from '../components/FractalTree';
-import { MapPin, ChevronDown } from 'lucide-react';
+import { MapPin, ChevronDown, ArrowRight } from 'lucide-react';
 
 const Index = () => {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -101,13 +102,22 @@ const Index = () => {
           <section id="experience" className="min-h-screen flex flex-col items-center justify-center px-4 md:px-6 py-16 md:py-20 text-center">
             <div className="max-w-4xl font-inter">
               <h2 className="text-3xl md:text-4xl font-light text-red-500 mb-8 md:mb-12">experience</h2>
-              <div className="text-base md:text-lg text-red-500 font-light leading-relaxed">
+              <div className="text-base md:text-lg text-red-500 font-light leading-relaxed mb-8">
                 <p>
                   i've had the privilege of working on products that reach millions of users worldwide, 
                   contributing to major feature launches and architectural decisions that shape user experiences 
                   at scale.
                 </p>
               </div>
+              
+              {/* View Experience Button */}
+              <Link
+                to="/experience"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 rounded font-medium mb-8"
+              >
+                <span>View Detailed Experience</span>
+                <ArrowRight size={16} />
+              </Link>
             </div>
             
             {/* Down Arrow */}
