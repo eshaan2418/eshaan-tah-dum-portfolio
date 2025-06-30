@@ -10,35 +10,35 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-left">
           {/* Technical Section */}
           <div>
-            <h3 className="text-xl md:text-2xl font-light text-red-500 mb-6">Technical</h3>
+            <h3 className="text-xl md:text-2xl font-light text-red-500 mb-6">technical</h3>
             <ul className="space-y-4 text-white font-light leading-relaxed">
               <li>
-                I'm working on my own <span className="text-red-500">startup</span> – something cool coming out this <span className="text-red-500">May</span> ;)
+                i'm working on my own <span className="text-red-500">startup</span> – something cool coming out this <span className="text-red-500">may</span> ;)
               </li>
               <li>
-                I'm individually authoring an <span className="text-red-500">ML paper</span> on helping people with glasses see their phones/laptops without glasses.
+                i'm individually authoring an <span className="text-red-500">ml paper</span> on helping people with glasses see their phones/laptops without glasses.
               </li>
               <li>
-                I'm always down for <span className="text-red-500">hackathons</span>.
+                i'm always down for <span className="text-red-500">hackathons</span>.
               </li>
             </ul>
           </div>
 
           {/* Fun Section */}
           <div>
-            <h3 className="text-xl md:text-2xl font-light text-red-500 mb-6">Fun</h3>
+            <h3 className="text-xl md:text-2xl font-light text-red-500 mb-6">fun</h3>
             <ul className="space-y-4 text-white font-light leading-relaxed">
               <li>
-                I'm obsessed with the <span className="text-red-500">moon</span>.
+                i'm obsessed with the <span className="text-red-500">moon</span>.
               </li>
               <li>
-                I'm currently catching up with <span className="text-red-500">Modern Family</span>.
+                i'm currently catching up with <span className="text-red-500">modern family</span>.
               </li>
               <li>
-                Unpopular opinion: <span className="text-red-500">sunrises</span> {'>'}  sunsets (I said it).
+                unpopular opinion: <span className="text-red-500">sunrises</span> {'>'}  sunsets (i said it).
               </li>
               <li>
-                I have an unhealthy obsession with <span className="text-red-500">math</span> (especially calculus).
+                i have an unhealthy obsession with <span className="text-red-500">math</span> (especially calculus).
               </li>
             </ul>
           </div>

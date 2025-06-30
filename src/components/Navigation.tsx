@@ -58,7 +58,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Social Links - Right side */}
           <div className="flex items-center space-x-4 md:space-x-6 order-3">
             <a
-              href="https://linkedin.com/in/eshaan-kapooswalla"
+              href="https://www.linkedin.com/in/eshaankapooswalla"
               target="_blank"
               rel="noopener noreferrer"
               className="text-red-500 hover:text-red-400 transition-colors duration-300 hover:scale-110 transform transition-transform"
