@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
@@ -480,54 +479,105 @@ const Index = () => {
               </div>
 
               {/* Education Details */}
-              <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10">
+              <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 mb-8">
                 <div className="text-center md:text-left">
                   <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-2">
-                    Lassonde School of Engineering, York University
+                    lassonde school of engineering, york university
                   </h3>
                   <p className="text-lg text-red-400 mb-3">
-                    Bachelor of Engineering in Software Engineering (Co-op)
+                    bachelor of engineering in software engineering (co-op)
                   </p>
                   <div className="flex flex-col md:flex-row md:items-center md:gap-4 mb-4 text-red-400">
                     <div className="flex items-center gap-2 justify-center md:justify-start">
                       <MapPin size={16} />
-                      <span>Toronto, Ontario, Canada</span>
+                      <span>toronto, ontario, canada</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center md:justify-start">
                       <Calendar size={16} />
-                      <span>Expected Graduation: April 2027</span>
+                      <span>expected graduation: april 2027</span>
                     </div>
                   </div>
                   
                   {/* Highlights */}
                   <div className="mb-4">
-                    <h4 className="text-red-500 font-medium mb-2">Highlights:</h4>
+                    <h4 className="text-red-500 font-medium mb-2">highlights:</h4>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                       <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full">
-                        Tentanda Via Scholar
+                        tentanda via scholar
                       </span>
                       <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full">
-                        Lassonde Co-op Program
+                        lassonde co-op program
                       </span>
                     </div>
                   </div>
 
                   {/* Relevant Coursework */}
                   <div>
-                    <h4 className="text-red-500 font-medium mb-2">Relevant Coursework:</h4>
+                    <h4 className="text-red-500 font-medium mb-2">relevant coursework:</h4>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
                       {[
-                        'Computer Science',
-                        'Data Structures and Algorithms',
-                        'Databases',
-                        'Computer Networks',
-                        'Computer Organization',
-                        'Operating Systems',
-                        'Object-Oriented Programming (OOPs)',
-                        'Software System Design'
+                        'computer science',
+                        'data structures and algorithms',
+                        'databases',
+                        'computer networks',
+                        'computer organization',
+                        'operating systems',
+                        'object-oriented programming (oops)',
+                        'software system design'
                       ].map((course, index) => (
                         <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
                           {course}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Programming Skills */}
+              <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10">
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-6">
+                    programming skills
+                  </h3>
+                  
+                  {/* Languages */}
+                  <div className="mb-4">
+                    <h4 className="text-red-500 font-medium mb-2">languages:</h4>
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
+                      {[
+                        'scala', 'python', 'java', 'javascript', 'typescript', 'c++', 'sql', 'assembly', 'html/css'
+                      ].map((language, index) => (
+                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                          {language}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Frameworks */}
+                  <div className="mb-4">
+                    <h4 className="text-red-500 font-medium mb-2">frameworks:</h4>
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
+                      {[
+                        'pytorch', 'spring boot', 'react', 'flask', 'scikit-learn', 'numpy', 'pandas', 'node.js'
+                      ].map((framework, index) => (
+                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                          {framework}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tools */}
+                  <div>
+                    <h4 className="text-red-500 font-medium mb-2">tools:</h4>
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
+                      {[
+                        'docker', 'kubernetes', 'google gemini ai api', 'mysql', 'mongodb', 'aws', 'gcp', 'kafka', 'postman', 'jira', 'confluence'
+                      ].map((tool, index) => (
+                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                          {tool}
                         </span>
                       ))}
                     </div>
