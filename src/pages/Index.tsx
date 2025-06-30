@@ -72,7 +72,7 @@ const experienceData: ExperienceEntry[] = [
   {
     id: '5',
     company: 'AIESEC',
-    location: 'Toronto',
+    location: 'Remote',
     role: 'VP of Tech',
     period: '2023 – 2024',
     description: [
