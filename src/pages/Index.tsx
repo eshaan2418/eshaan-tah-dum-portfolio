@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
@@ -479,15 +480,15 @@ const Index = () => {
               </div>
 
               {/* Education Details */}
-              <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 mb-8">
+              <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 mb-8">
                 <div className="text-center md:text-left">
                   <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-2">
                     lassonde school of engineering, york university
                   </h3>
-                  <p className="text-lg text-red-400 mb-3">
+                  <p className="text-lg text-red-500 mb-3">
                     bachelor of engineering in software engineering (co-op)
                   </p>
-                  <div className="flex flex-col md:flex-row md:items-center md:gap-4 mb-4 text-red-400">
+                  <div className="flex flex-col md:flex-row md:items-center md:gap-4 mb-4 text-red-500">
                     <div className="flex items-center gap-2 justify-center md:justify-start">
                       <MapPin size={16} />
                       <span>toronto, ontario, canada</span>
@@ -500,12 +501,12 @@ const Index = () => {
                   
                   {/* Highlights */}
                   <div className="mb-4">
-                    <h4 className="text-red-500 font-medium mb-2">highlights:</h4>
+                    <h4 className="text-white font-medium mb-2">highlights:</h4>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                      <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full">
+                      <span className="px-3 py-1 bg-red-500/20 text-red-500 text-sm rounded-full">
                         tentanda via scholar
                       </span>
-                      <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full">
+                      <span className="px-3 py-1 bg-red-500/20 text-red-500 text-sm rounded-full">
                         lassonde co-op program
                       </span>
                     </div>
@@ -513,7 +514,7 @@ const Index = () => {
 
                   {/* Relevant Coursework */}
                   <div>
-                    <h4 className="text-red-500 font-medium mb-2">relevant coursework:</h4>
+                    <h4 className="text-white font-medium mb-2">relevant coursework:</h4>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
                       {[
                         'computer science',
@@ -525,7 +526,7 @@ const Index = () => {
                         'object-oriented programming (oops)',
                         'software system design'
                       ].map((course, index) => (
-                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                        <span key={index} className="px-2 py-1 bg-red-500/20 text-red-500 rounded">
                           {course}
                         </span>
                       ))}
@@ -535,7 +536,7 @@ const Index = () => {
               </div>
 
               {/* Programming Skills */}
-              <div className="bg-black/60 backdrop-blur-sm border border-red-900/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10">
+              <div className="bg-black/60 backdrop-blur-sm border border-red-500/30 rounded-lg p-6 md:p-8 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10">
                 <div className="text-center md:text-left">
                   <h3 className="text-xl md:text-2xl font-semibold text-red-500 mb-6">
                     programming skills
@@ -543,12 +544,12 @@ const Index = () => {
                   
                   {/* Languages */}
                   <div className="mb-4">
-                    <h4 className="text-red-500 font-medium mb-2">languages:</h4>
+                    <h4 className="text-white font-medium mb-2">languages:</h4>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
                       {[
-                        'scala', 'python', 'java', 'javascript', 'typescript', 'c++', 'sql', 'assembly', 'html/css'
+                        'python', 'javascript/typescript', 'java', 'c/c++', 'sql', 'r', 'go', 'html', 'css', 'bash', 'assembly'
                       ].map((language, index) => (
-                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                        <span key={index} className="px-2 py-1 bg-red-500/20 text-red-500 rounded">
                           {language}
                         </span>
                       ))}
@@ -557,12 +558,12 @@ const Index = () => {
 
                   {/* Frameworks */}
                   <div className="mb-4">
-                    <h4 className="text-red-500 font-medium mb-2">frameworks:</h4>
+                    <h4 className="text-white font-medium mb-2">frameworks:</h4>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
                       {[
-                        'pytorch', 'spring boot', 'react', 'flask', 'scikit-learn', 'numpy', 'pandas', 'node.js'
+                        'django', 'react', 'spring boot', 'angular', 'next.js', 'pytorch', 'scikit', 'numpy', 'opencv', 'node.js', 'graphql'
                       ].map((framework, index) => (
-                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                        <span key={index} className="px-2 py-1 bg-red-500/20 text-red-500 rounded">
                           {framework}
                         </span>
                       ))}
@@ -571,12 +572,12 @@ const Index = () => {
 
                   {/* Tools */}
                   <div>
-                    <h4 className="text-red-500 font-medium mb-2">tools:</h4>
+                    <h4 className="text-white font-medium mb-2">tools:</h4>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start text-sm">
                       {[
-                        'docker', 'kubernetes', 'google gemini ai api', 'mysql', 'mongodb', 'aws', 'gcp', 'kafka', 'postman', 'jira', 'confluence'
+                        'git', 'docker', 'postman', 'jira/confluence', 'mongodb', 'postgresql', 'selenium', 'heroku', 'aws', 'gcp', 'kubernetes', 'google gemini ai api', 'kafka'
                       ].map((tool, index) => (
-                        <span key={index} className="px-2 py-1 bg-red-900/20 text-red-400 rounded">
+                        <span key={index} className="px-2 py-1 bg-red-500/20 text-red-500 rounded">
                           {tool}
                         </span>
                       ))}
